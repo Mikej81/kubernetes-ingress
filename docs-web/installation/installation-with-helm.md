@@ -244,12 +244,9 @@ The following tables lists the configurable parameters of the NGINX Ingress cont
    * - ``controller.enableTLSPassthrough``
      - Enable TLS Passthrough on port 443. Requires ``controller.enableCustomResources``.
      - false
-   * - ``controller.globalConfiguration.create``
-     - Creates the GlobalConfiguration custom resource. Requires ``controller.enableCustomResources``.
-     - false
-   * - ``controller.globalConfiguration.spec``
-     - The spec of the GlobalConfiguration for defining the global configuration parameters of the Ingress Controller.
-     - {}
+   * - ``controller.globalConfiguration``
+     - Specifies the name of the GlobalConfiguration custom resource. Requires ``controller.enableCustomResources``.
+     - ""
    * - ``controller.enableSnippets``
      - Enable custom NGINX configuration snippets in VirtualServer, VirtualServerRoute and TransportServer resources.
      - false
