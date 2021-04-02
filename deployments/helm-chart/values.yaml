@@ -154,8 +154,19 @@ controller:
   ## Enable TLS Passthrough on port 443. Requires controller.enableCustomResources.
   enableTLSPassthrough: false
 
-  ## Specifies the name of the GlobalConfiguration custom resource. Requires controller.enableCustomResources.
-  globalConfiguration: ""
+  globalConfiguration:
+    ## Creates the GlobalConfiguration custom resource. Requires controller.enableCustomResources.
+    create: false
+
+    ## The spec of the GlobalConfiguration for defining the global configuration parameters of the Ingress Controller.
+    spec: {}
+      # listeners:
+      # - name: dns-udp
+      #   port: 5353
+      #   protocol: UDP
+      # - name: dns-tcp
+      #   port: 5353
+      #   protocol: TCP
 
   ## Enable custom NGINX configuration snippets in VirtualServer, VirtualServerRoute and TransportServer resources.
   enableSnippets: false
